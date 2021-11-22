@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { createGlobalStyle } from 'styled-components';
 
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const GlobalStyle = createGlobalStyle({
   body: {
@@ -21,6 +22,8 @@ function App() {
         <Route path="/" element={<Placeholder msg="Home" />} />
         <Route path="/search" element={<Placeholder msg="Search" />} />
       </Routes>
+
+      <Footer />
     </Router>
   );
 }
