@@ -1,17 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import Logo from './Logo';
 
 export default function Header() {
   return (
     <StyledHeader>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
 
       <LinksContainer>
-        <p>Search</p>
-        <a href="#how-it-works">How it works</a>
-        <a href="#about">About</a>
+        <StyledLink to="/search">
+          Search
+        </StyledLink>
+
+        <StyledLink to="#how-it-works">How it works</StyledLink>
+
+        <StyledLink to="#about">About</StyledLink>
       </LinksContainer>
 
     </StyledHeader>
@@ -31,5 +38,14 @@ display: flex;
 align-items: center;
 > * {
   margin-right: 3rem;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  font-family: 'Montserrat';
+  color: gray;
+  text-decoration: none;
+  :visited {
+    color: gray;
   }
 `;
