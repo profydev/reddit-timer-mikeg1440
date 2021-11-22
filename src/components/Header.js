@@ -12,7 +12,7 @@ export default function Header() {
       </Link>
 
       <LinksContainer>
-        <StyledLink to="/search">
+        <StyledLink to="/search?value=javascript">
           Search
         </StyledLink>
 
