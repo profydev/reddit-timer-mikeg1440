@@ -1,29 +1,36 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { createGlobalStyle } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-const GlobalStyle = createGlobalStyle({
-  body: {
-    fontFamily: 'Bitter',
+const theme = {
+  mode: 'light',
+  text: {
+    primary: 'black',
+    secondary: 'gray',
   },
-});
+  background: {
+    primary: 'white',
+    secondary: 'lightgray',
+  },
+};
 
 function App() {
   return (
     <Router>
-      <GlobalStyle />
-      <Header />
+      <ThemeProvider theme={theme}>
+        <Header />
 
-      <Routes>
-        <Route path="/" element={<Placeholder msg="Home" />} />
-        <Route path="/search" element={<Placeholder msg="Search" />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Placeholder msg="Home" />} />
+          <Route path="/search" element={<Placeholder msg="Search" />} />
+        </Routes>
 
-      <Footer />
+        <Footer />
+      </ThemeProvider>
     </Router>
   );
 }
