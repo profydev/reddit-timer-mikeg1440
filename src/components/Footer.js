@@ -7,9 +7,9 @@ import Logo from './Logo';
 export default function Footer() {
   return (
     <StyledFooter>
-      <StyledLink to="https://profy.dev/employers">
+      <StyledHref target="_blank" href="https://profy.dev/employers">
         profy.dev
-      </StyledLink>
+      </StyledHref>
 
       <Link to="/">
         <Logo />
@@ -30,6 +30,15 @@ const StyledFooter = styled.footer`
 `;
 
 const StyledLink = styled(Link)`
+  font-family: 'Montserrat';
+  color: gray;
+  text-decoration: none;
+  :visited {
+    color: gray;
+  }
+`;
+
+const StyledHref = styled.a`
   font-family: 'Montserrat';
   color: gray;
   text-decoration: none;
