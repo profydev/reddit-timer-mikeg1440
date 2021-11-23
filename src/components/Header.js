@@ -43,9 +43,9 @@ align-items: center;
 
 const StyledLink = styled(Link)`
   font-family: 'Montserrat';
-  color: gray;
+  color: ${(props) => props.theme.text.secondary};
   text-decoration: none;
   :visited {
-    color: gray;
+    color: ${(props) => props.theme.text.secondary};
   }
 `;
