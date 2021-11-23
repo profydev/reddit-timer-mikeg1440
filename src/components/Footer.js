@@ -24,12 +24,13 @@ export default function Footer() {
 
 const StyledFooter = styled.footer`
   display: flex;
-  justify-content: space-around;
   align-items: center;
   margin: 1rem 5rem;
 `;
 
 const StyledLink = styled(Link)`
+  flex: 1;
+  text-align: center;
   font-family: 'Montserrat';
   color: gray;
   text-decoration: none;
