@@ -26,15 +26,16 @@ const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   margin: 1rem 5rem;
+  background-color: ${(props) => props.theme.background.primary};
 `;
 
 const StyledLink = styled(Link)`
   flex: 1;
   text-align: center;
   font-family: 'Montserrat';
-  color: gray;
+  color: ${(props) => props.theme.text.secondary};
   text-decoration: none;
   :visited {
-    color: gray;
+    color: ${(props) => props.theme.text.secondary};
   }
 `;
