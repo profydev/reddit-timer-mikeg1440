@@ -25,8 +25,10 @@ export default function Footer() {
 const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
-  margin: 1rem 5rem;
+  margin: auto;
   background-color: ${(props) => props.theme.background.primary};
+  max-width: 940px;
+  width: 100%;
 `;
 
 const StyledLink = styled(Link)`
