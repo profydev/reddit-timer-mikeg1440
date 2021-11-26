@@ -26,10 +26,10 @@ export default function Header() {
 }
 
 const StyledHeader = styled.header`
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 `;
 
 const LinksContainer = styled.nav`
@@ -37,7 +37,7 @@ font-weight: bold;
 display: flex;
 align-items: center;
 > * {
-  margin-right: 3rem;
+  margin-right: 26px;
   }
 `;
 
