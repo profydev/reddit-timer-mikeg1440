@@ -16,7 +16,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <Header />
-    
+
       <Routes>
         <Route path="/" element={<Placeholder msg="Home" />} />
         <Route path="/search" element={<Placeholder msg="Search" />} />
