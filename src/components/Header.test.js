@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { render as rtlRender, screen, getByRole } from '@testing-library/react';
+import { render as rtlRender, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './Header';
 
