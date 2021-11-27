@@ -31,9 +31,26 @@ describe('Header Component', () => {
     screen.debug();
   });
 
-  test('It renders logo inside a "a" tag that points to "/"', () => {
-    render(<Header />);
-    // expect(screen.getByRole('link/').getAttribute('href')).toEqual('/');
-    expect(screen.getByRole('link', { name: '' }).getAttribute('href')).toEqual('/');
+  describe('Header Nav Links', () => {
+    test('It renders logo inside a "a" tag that points to "/"', () => {
+      render(<Header />);
+      // expect(screen.getByRole('link/').getAttribute('href')).toEqual('/');
+      expect(screen.getByRole('link', { name: '' }).getAttribute('href')).toEqual('/');
+    });
+
+    test('About link is a hashlink', () => {
+      render(<Header />);
+      expect(screen.getByRole('link', { name: 'About' })).toBeTruthy();
+    });
+
+    test('How it works link is a hash link', () => {
+      render(<Header />);
+      expect(screen.getByRole('link', { name: 'How it works' })).toBeTruthy();
+    });
+
+    test('Search link is not a hashlink', () => {
+      render(<Header />);
+      expect(screen.getByRole('link', { name: 'Search' }).getAttribute('href')).toEqual('/search?value=javascript');
+    });
   });
 });
