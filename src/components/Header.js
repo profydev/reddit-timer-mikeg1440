@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import Logo from './Logo';
+import HeaderLogo from './HeaderLogo';
 
 export default function Header() {
   return (
     <StyledHeader>
       <Link to="/">
-        <Logo />
+        <HeaderLogo />
       </Link>
 
       <LinksContainer>
@@ -26,10 +26,10 @@ export default function Header() {
 }
 
 const StyledHeader = styled.header`
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 `;
 
 const LinksContainer = styled.nav`
@@ -37,15 +37,15 @@ font-weight: bold;
 display: flex;
 align-items: center;
 > * {
-  margin-right: 3rem;
+  margin-right: 26px;
   }
 `;
 
 const StyledLink = styled(Link)`
   font-family: 'Montserrat';
-  color: gray;
+  color: ${(props) => props.theme.text.secondary};
   text-decoration: none;
   :visited {
-    color: gray;
+    color: ${(props) => props.theme.text.secondary};
   }
 `;
