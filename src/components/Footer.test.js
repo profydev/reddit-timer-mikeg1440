@@ -1,6 +1,6 @@
 import { screen, render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
-import { MemoryRouter } from 'react-router';
+import { BrowserRouter as MemoryRouter } from 'react-router-dom';
 
 import Footer from './Footer';
 
