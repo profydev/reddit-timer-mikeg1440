@@ -1,3 +1,4 @@
+import React from 'react';
 import { screen, render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as MemoryRouter } from 'react-router-dom';
@@ -19,7 +20,7 @@ const testTheme = {
 const themeWrapper = () => (
   <MemoryRouter>
     <ThemeProvider theme={testTheme}>
-      <Footer/>
+      <Footer />
     </ThemeProvider>
   </MemoryRouter>
 );
